@@ -26,10 +26,11 @@ def draw_triangle():
     ans = int(sys.stdin.readline())
     if ans <= 10:
         print('How big?')
-        ans = int(sys.stdin.readline())
-        ans = ans+side_length
+        ans2 = int(sys.stdin.readline())
+        side_length = ans2
         if side_length <= 50:
-            triangle()
+            for x in range(1,ans+1):
+                triangle()
         else:
             print('That\'s too big')
             return
