@@ -20,7 +20,7 @@ def topcorner():
     t.right(90)
     t.down()
 
-def draw_triangle():
+def draw_triangles():
     global side_length
     print('How many triangles do you want?')
     ans = int(sys.stdin.readline())
@@ -40,6 +40,21 @@ def draw_triangle():
         for x in range(1,ans+1):
             triangle()
 
-topcorner()
-draw_triangle()
+def draw_again():
+    t.up()
+    t.backward(ans*(side_length+10))
+    t.right(90)
+    t.forward(50)
+    t.left(90)
+    t.down()
 
+def again():
+    while True:
+        print('Press enter to draw again')
+        input()
+        draw_again()
+        draw_triangles() 
+
+topcorner()
+draw_triangles()
+again()
