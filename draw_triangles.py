@@ -19,14 +19,6 @@ def triangle():
     t.forward(side_length+10)
     t.down()
 
-def topcorner():
-    t.up()
-    t.backward(250)
-    t.left(90)
-    t.forward(200)
-    t.right(90)
-    t.down()
-
 def draw_triangles():
     global side_length
     print('How many triangles do you want?')
@@ -59,9 +51,10 @@ def draw_triangles():
         side_length = 30
         for x in range(1,(int(ans/15+1))):
             one_row()
-        draw_again()
-        for x in range(1,(ans-(15*(int(ans/15+1))))):
+            draw_again()
+        for x in range(1,(ans-(15*(int(ans/15)))+1)):
             triangle()
+        print(ans-(15*(int(ans/15)))+1)
 
 def one_row():
     for x in range(1,16):
@@ -82,6 +75,5 @@ def again():
         draw_again()
         draw_triangles() 
 
-#topcorner()
 draw_triangles()
 again()
