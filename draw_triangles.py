@@ -2,6 +2,12 @@ import turtle
 t = turtle.Pen()
 import sys
 
+turtle.setup(650,600)
+t.up()
+t.setx(-280)
+t.sety(240)
+t.down()
+
 side_length = 0
 
 def triangle():
@@ -34,15 +40,23 @@ def draw_triangles():
         else:
             print('That\'s too big')
             return
-    else:
+    elif ans >= 11 and ans <=15:
         print('Ok! Here we go!')
         side_length = 30
         for x in range(1,ans+1):
             triangle()
-
+    elif ans > 15:
+        print('Ok! Here we go!')
+        side_length = 30
+        for x in range(1,16):
+            triangle()
+        draw_again()
+        for x in range(1,(ans-15)+1):
+            triangle()
+        
 def draw_again():
     t.up()
-    t.backward(ans*(side_length+10))
+    t.setx(-280)
     t.right(90)
     t.forward(50)
     t.left(90)
@@ -55,6 +69,6 @@ def again():
         draw_again()
         draw_triangles() 
 
-topcorner()
+#topcorner()
 draw_triangles()
 again()
