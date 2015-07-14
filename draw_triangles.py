@@ -7,6 +7,7 @@ t.up()
 t.setx(-280)
 t.sety(240)
 t.down()
+t.speed(0)
 
 side_length = 0
 
@@ -34,18 +35,18 @@ def draw_triangles():
         print('How big?')
         ans2 = int(sys.stdin.readline())
         side_length = ans2
-        if side_length <= 50:
+        if side_length <= 50:  #px
             for x in range(1,ans+1):
                 triangle()
         else:
             print('That\'s too big')
             return
-    elif ans >= 11 and ans <=15:
+    elif ans >= 11 and ans <=15:  #can fit 15 in a row
         print('Ok! Here we go!')
         side_length = 30
         for x in range(1,ans+1):
             triangle()
-    elif ans > 15:
+    elif ans >= 16 and ans <=30:
         print('Ok! Here we go!')
         side_length = 30
         for x in range(1,16):
@@ -53,6 +54,18 @@ def draw_triangles():
         draw_again()
         for x in range(1,(ans-15)+1):
             triangle()
+    elif ans >= 31:
+        print('Wow.. that\'s a lot.. but ok!')
+        side_length = 30
+        for x in range(1,(int(ans/15+1))):
+            one_row()
+        draw_again()
+        for x in range(1,(ans-(15*(int(ans/15+1))))):
+            triangle()
+
+def one_row():
+    for x in range(1,16):
+        triangle()
         
 def draw_again():
     t.up()
