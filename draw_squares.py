@@ -1,13 +1,5 @@
-import turtle
-t = turtle.Pen()
 import sys
-
-turtle.setup(650,620)
-t.up()
-t.setx(-300)
-t.sety(260)
-t.down()
-t.speed(0)
+t=None
 
 side_length = 0
 
@@ -62,21 +54,3 @@ def draw_squares():
 def one_row():
     for x in range(1,16):
         square()
-        
-def draw_again():
-    t.up()
-    t.setx(-300)
-    t.right(90)
-    t.forward(50)
-    t.left(90)
-    t.down()
-
-def again():
-    while True:
-        print('Press enter to draw again')
-        input()
-        draw_again()
-        draw_squares() 
-
-draw_squares()
-again()
