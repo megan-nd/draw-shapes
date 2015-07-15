@@ -16,7 +16,7 @@ def circle(radius):
     t.down()
 
 def draw_circles():
-    fixed_radius = 15
+    fixed_radius = 18
     print('How many circles do you want?')
     ans = int(sys.stdin.readline())
     if ans <= 10:
