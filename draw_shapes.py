@@ -17,9 +17,10 @@ t.sety(260)
 t.down()
 t.speed(0)
 
+print('Hey there! So you want to draw some shapes, eh?')
+
 def hello():
-    print('Hey there! So you want to draw some shapes, eh?')
-    print('What do you want to draw? Circles, squares, or triangles?')
+    print('What do you want to draw? Circles, squares, triangles.. or let me pick?')
     ans = sys.stdin.readline()
     ans = ans.strip()
     if ans == 'circles':
