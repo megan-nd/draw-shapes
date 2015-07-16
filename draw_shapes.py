@@ -1,6 +1,14 @@
 import turtle
 t = turtle.Pen()
 import sys
+import random
+
+import draw_circles, draw_squares, draw_triangles, draw_random
+
+draw_circles.t = t
+draw_squares.t = t
+draw_triangles.t = t
+draw_random.t = t
 
 turtle.setup(650,620)
 t.up()
@@ -15,17 +23,14 @@ def hello():
     ans = sys.stdin.readline()
     ans = ans.strip()
     if ans == 'circles':
-        import draw_circles
-        draw_circles.t = t
         draw_circles.draw_circles()
     elif ans == 'squares':
-        import draw_squares
-        draw_squares.t = t
         draw_squares.draw_squares()
     elif ans == 'triangles':
-        import draw_triangles
-        draw_triangles.t = t
         draw_triangles.draw_triangles()
+    elif ans == 'you pick':
+        print('Yay!')
+        draw_random.draw_random()
 
 def draw_again():
     t.up()
