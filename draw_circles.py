@@ -1,5 +1,5 @@
 import sys
-t=None
+t = None
 
 def circle(radius):
     t.circle(radius)
@@ -47,3 +47,11 @@ def draw_circles():
 def one_row(radius):
     for x in range(1,16):
         circle(radius)
+
+def draw_again():
+    t.up()
+    t.setx(-300)
+    t.right(90)
+    t.forward(50)
+    t.left(90)
+    t.down()

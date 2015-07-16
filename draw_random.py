@@ -27,20 +27,18 @@ def square():
     t.forward(side_length+10)
     t.down()
 
-quantity = random.randint(1,16)
-
 def draw_random():
-    global quantity
+    quantity = random.randint(1,16)
     ans = random.choice([circle,square,triangle])
     if ans == circle():
         radius = random.randint(5,18)
         for x in range (1,quantity):
-            draw_circle()
+            circle()
     elif ans == square():
         side_length = random.randint(5,50)
         for x in range (1,quantity):
-            draw_square()
+            square()
     elif ans == triangle():
         side_length = random.randint(5,50)
         for x in range (1,quantity):
-            draw_triangle()
+            triangle()

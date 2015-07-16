@@ -1,5 +1,5 @@
 import sys
-t=None
+t = None
 
 side_length = 0
 
@@ -54,3 +54,11 @@ def draw_squares():
 def one_row():
     for x in range(1,16):
         square()
+
+def draw_again():
+    t.up()
+    t.setx(-300)
+    t.right(90)
+    t.forward(50)
+    t.left(90)
+    t.down()

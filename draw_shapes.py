@@ -12,8 +12,7 @@ draw_random.t = t
 
 turtle.setup(650,620)
 t.up()
-t.setx(-300)
-t.sety(260)
+t.goto(-300,260)
 t.down()
 t.speed(0)
 
