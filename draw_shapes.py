@@ -24,11 +24,11 @@ def hello():
     ans = ans.strip()
     if ans == 'circles':
         draw_circles.draw_circles()
-    elif ans == 'squares':
+    if ans == 'squares':
         draw_squares.draw_squares()
-    elif ans == 'triangles':
+    if ans == 'triangles':
         draw_triangles.draw_triangles()
-    elif ans == 'you pick':
+    if ans == 'you pick':
         print('Yay!')
         draw_random.draw_random()
 

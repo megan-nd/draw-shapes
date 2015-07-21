@@ -34,11 +34,11 @@ def draw_random():
         radius = random.randint(5,18)
         for x in range (1,quantity):
             circle()
-    elif ans == square():
+    if ans == square():
         side_length = random.randint(5,50)
         for x in range (1,quantity):
             square()
-    elif ans == triangle():
+    if ans == triangle():
         side_length = random.randint(5,50)
         for x in range (1,quantity):
             triangle()
